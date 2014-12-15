@@ -1,6 +1,6 @@
 # RPN Calculator
 
-This RPN calcualator takes strings, and returns floating point numbers which correspond to the evaluation of the string.
+This RPN calculator takes strings, and returns floating point numbers which correspond to the evaluation of the string.
 
 Give the test cases a spin! They produce these results:
 
@@ -64,7 +64,7 @@ Depending on the `next_token', we'll do different things.
             else
                 raise "invalid input"
                 
-At the end, \`res' contains the result of our chewing and reducing. If our input string was valid, we should only have one number in our stack: the result. If so, we'll just reutn that. If, however, there are multiple items in the stack, that means that there were more numbers than symbols, so some numbers couldn't be reduced. In that case, the input string is considered malformed, so we raise an exception, stating that there is an "incorrect number of arguments".
+At the end, \`res' contains the result of our chewing and reducing. If our input string was valid, we should only have one number in our stack: the result. If so, we'll just return that. If, however, there are multiple items in the stack, that means that there were more numbers than symbols, so some numbers couldn't be reduced. In that case, the input string is considered malformed, so we raise an exception, stating that there is an "incorrect number of arguments".
 
         res.count == 1 ? res.first : raise("incorrect number of arguments")
         
@@ -94,7 +94,7 @@ Notably, the \`to_num' method is meta-programmed to be a part of the String clas
 
 - #### Why use \`reduce'?
   - As a lover of Haskell, folding from the left seems like the best way to reduce a list of values to a single one. Arguably, to a Ruby beginner / colleagues, this isn't the clearest code. Alternatively, I could have written it iteratively, whilst declaring a stack variable beforehand. That's shown below.
-  - Since my recruiter told me to come up wih a "novel" solution, using a \`reduce' seemed like a reasonable idea. 
+  - Since my recruiter told me to come up with a "novel" solution, using a \`reduce' seemed like a reasonable idea. 
   - If I were pushing to production, it's quite likely I'd use the iterative version instead (since most developers would be more familiar with it.)
   - (Bonus: it shows off my knowledge of Ruby and of functional programming.)
   
